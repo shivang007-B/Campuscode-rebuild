@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAMPUSCODE — Hackathon Arena</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/css/entry.css">
+</head>
+
+<body>
+  <!-- Entry Splash Animation -->
+  <aside id="entry-splash" aria-label="CampusCode System Boot">
+    <button type="button" class="splash-skip-btn" id="splash-skip-btn">SKIP [ESC]</button>
+    <div class="splash-content">
+      <svg class="splash-logo-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Slash 1: Black -->
+        <rect class="slash-anim-1" x="10" y="8" width="10" height="44" rx="4" transform="rotate(-18 10 8)"
+          fill="#111111" />
+        <!-- Slash 2: Purple -->
+        <rect class="slash-anim-2" x="24" y="8" width="10" height="44" rx="4" transform="rotate(-18 24 8)"
+          fill="#7665ff" />
+        <!-- Slash 3: Lime -->
+        <rect class="slash-anim-3" x="38" y="8" width="10" height="44" rx="4" transform="rotate(-18 38 8)"
+          fill="#a8e62e" />
+      </svg>
+      <h1 class="splash-title">CAMPUSCODE</h1>
+      <p class="splash-tagline">BUILD • COMPETE • SHIP</p>
+      <div class="splash-progress-container">
+        <div class="splash-progress-bar" id="splash-progress-bar"></div>
+      </div>
+      <div class="splash-status" id="splash-status-text">INITIALIZING ARENA... 0%</div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <!-- Navigation -->
+    <nav>
+      <a class="brand" href="#top">
+        <svg class="brand-logo" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-label="CampusCode Logo">
+          <rect width="44" height="44" rx="8" fill="#f7f7f4" />
+          <!-- Slash 1: Black -->
+          <rect x="7" y="6" width="8" height="32" rx="3" transform="rotate(-18 7 6)" fill="#111111" />
+          <!-- Slash 2: Purple -->
+          <rect x="17" y="6" width="8" height="32" rx="3" transform="rotate(-18 17 6)" fill="#7665ff" />
+          <!-- Slash 3: Lime -->
+          <rect x="27" y="6" width="8" height="32" rx="3" transform="rotate(-18 27 6)" fill="#a8e62e" />
+        </svg>
+        <div class="brand-text">
+          <span>CAMPUSCODE</span>
+          <small>HACKATHON ARENA</small>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#how">How It Works</a>
+        <a href="#hackathons">Hackathons</a>
+        <a href="#community">Community</a>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-login" href="login.html">LOGIN</a>
+        <a class="pill-sm" href="register.html">JOIN CAMPUSCODE ↗</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="eyebrow-row">
+        <p class="eyebrow">THE DIGITAL HOME FOR STUDENT INNOVATION</p>
+        <span>CHENNAI · INDIA</span>
+        <span>CAMPUSCODE / 001</span>
+      </div>
+
+      <div class="planet planet-one">
+        <svg class="planet-logo" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-label="CampusCode">
+          <circle cx="45" cy="45" r="45" fill="#f7f7f4" />
+          <rect x="14" y="12" width="14" height="56" rx="4" transform="rotate(-18 14 12)" fill="#111111" />
+          <rect x="33" y="12" width="14" height="56" rx="4" transform="rotate(-18 33 12)" fill="#7665ff" />
+          <rect x="52" y="12" width="14" height="56" rx="4" transform="rotate(-18 52 12)" fill="#a8e62e" />
+        </svg>
+      </div>
+
+      <h1>
+        <div class="hero-line hero-line-build">BUILD</div>
+        <div class="hero-line hero-line-compete">COMPETE</div>
+        <div class="hero-line hero-line-ship"><span class="highlight-ship">SHIP.</span></div>
+      </h1>
+
+      <p class="hero-copy">A digital arena for students who don't just have ideas. They build them.</p>
+
+      <div class="hero-actions">
+        <a class="pill black" href="dashboard.html#events">EXPLORE HACKATHONS <b>↗</b></a>
+      </div>
+
+      <div class="scroll-note">
+        SCROLL TO EXPLORE ↓ <span>01 / 05</span>
+      </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>IDEAS ✦ PEOPLE ✦ PRODUCTS ✦ INNOVATION ✦ COMMUNITY</span><i>✦</i>
+        <span>IDEAS ✦ PEOPLE ✦ PRODUCTS ✦ INNOVATION ✦ COMMUNITY</span><i>✦</i>
+        <span>IDEAS ✦ PEOPLE ✦ PRODUCTS ✦ INNOVATION ✦ COMMUNITY</span><i>✦</i>
+        <span>IDEAS ✦ PEOPLE ✦ PRODUCTS ✦ INNOVATION ✦ COMMUNITY</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- 01: What is CampusCode? -->
+    <section class="about" id="about">
+      <div class="about-top">
+        <p class="section-tag">01 / WHAT IS CAMPUSCODE?</p>
+        <p>CampusCode brings students, teams, organizers and hackathons into one connected ecosystem.</p>
+      </div>
+
+      <div class="word-cloud">
+        <button class="bubble" type="button">C</button>
+        <button class="bubble" type="button">A</button>
+        <button class="bubble" type="button">M</button>
+        <button class="bubble" type="button">P</button>
+        <button class="bubble" type="button">U</button>
+        <button class="bubble" type="button">S</button>
+        <button class="bubble" type="button">C</button>
+        <button class="bubble" type="button">O</button>
+        <button class="bubble" type="button">D</button>
+        <button class="bubble" type="button">E</button>
+      </div>
+      <p class="tap">TAP A BUBBLE TO POP IT</p>
+
+      <div class="about-bottom">
+        <div class="orbit">
+          <svg class="orbit-logo" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-label="CampusCode">
+            <circle cx="31" cy="31" r="31" fill="#f7f7f4" />
+            <rect x="9" y="8" width="10" height="38" rx="3" transform="rotate(-18 9 8)" fill="#111111" />
+            <rect x="23" y="8" width="10" height="38" rx="3" transform="rotate(-18 23 8)" fill="#7665ff" />
+            <rect x="37" y="8" width="10" height="38" rx="3" transform="rotate(-18 37 8)" fill="#a8e62e" />
+          </svg>
+          <span>01 02 03</span>
+        </div>
+        <h2>WHERE<br>STUDENTS<br><em>BUILD.</em></h2>
+        <p>CampusCode brings students, teams, organizers and hackathons into one connected ecosystem.</p>
+      </div>
+    </section>
+
+    <!-- 02: Experience -->
+    <section class="experience" id="experience">
+      <div class="experience-inner">
+        <p class="section-tag">02 / EXPERIENCE 00:30</p>
+        <div class="experience-content">
+          <div class="experience-text">
+            <h2>THE CAMPUSCODE<br>EXPERIENCE<br><em>BUILD TOGETHER.</em></h2>
+            <p class="experience-subtext">Watch how students collaborate, build groundbreaking projects, and ship together across college hackathons.</p>
+          </div>
+          <div class="video-container">
+            <div class="video-frame" id="video-frame-container" title="Hover over screen to listen">
+              <div class="video-topbar">
+                <div class="video-dots">
+                  <span class="video-dot red"></span>
+                  <span class="video-dot yellow"></span>
+                  <span class="video-dot green"></span>
+                </div>
+                <span class="video-title-tag">WHAT IS CAMPUSCODE</span>
+                <span class="video-hover-status" id="video-hover-status">
+                  <svg class="audio-status-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                  <span id="audio-status-label">HOVER FOR SOUND</span>
+                </span>
+              </div>
+              <div class="video-wrapper">
+                <video id="campuscode-video" class="experience-video" autoplay muted loop playsinline preload="auto" src="/what-is-campuscode.mp4">
+                  <source src="/what-is-campuscode.mp4" type="video/mp4">
+                  <source src="what-is-campuscode.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03: How It Works -->
+    <section class="how-it-works" id="how">
+      <p class="section-tag">03 / HOW IT WORKS</p>
+      <h2>FROM IDEA<br>TO <em>IMPACT.</em></h2>
+
+      <div class="how-grid">
+        <article class="how-card">
+          <div>
+            <span class="how-num">01</span>
+            <h3>DISCOVER</h3>
+            <p>Find a challenge that makes you want to build.</p>
+          </div>
+          <span class="how-arrow">↗</span>
+        </article>
+
+        <article class="how-card">
+          <div>
+            <span class="how-num">02</span>
+            <h3>TEAM UP</h3>
+            <p>Find people who share your ambition.</p>
+          </div>
+          <span class="how-arrow">↗</span>
+        </article>
+
+        <article class="how-card">
+          <div>
+            <span class="how-num">03</span>
+            <h3>BUILD</h3>
+            <p>Turn your idea into something people can use.</p>
+          </div>
+          <span class="how-arrow">↗</span>
+        </article>
+
+        <article class="how-card">
+          <div>
+            <span class="how-num">04</span>
+            <h3>SHIP</h3>
+            <p>Submit your work and take it to the arena.</p>
+          </div>
+          <span class="how-arrow">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04: Enter The Arena -->
+    <section class="projects" id="hackathons">
+      <div class="section-head">
+        <p class="section-tag">04 / ENTER THE ARENA</p>
+        <h2>CHALLENGE<br><em>ARENA</em></h2>
+        <a href="https://campus-code-ten.vercel.app/#hackathons">VIEW ALL ↗</a>
+      </div>
+
+      <div class="project-list">
+        <!-- Hackathon 01 -->
+        <article class="project">
+          <div class="project-art">
+            <span class="project-art-num">01</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tag-row">
+              <span class="project-track">ARTIFICIAL INTELLIGENCE</span>
+              <span class="status-badge status-live">● LIVE</span>
+            </div>
+            <h3>AI INNOVATION</h3>
+            <p>Build intelligent solutions for problems that matter.</p>
+            <a class="project-btn" href="https://campus-code-ten.vercel.app/#hackathons">ENTER ↗</a>
+          </div>
+        </article>
+
+        <!-- Hackathon 02 -->
+        <article class="project">
+          <div class="project-art">
+            <span class="project-art-num">02</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tag-row">
+              <span class="project-track">WEB DEVELOPMENT</span>
+              <span class="status-badge status-open">OPEN</span>
+            </div>
+            <h3>FUTURE WEB</h3>
+            <p>Design and ship the next generation of digital experiences.</p>
+            <a class="project-btn" href="https://campus-code-ten.vercel.app/#hackathons">ENTER ↗</a>
+          </div>
+        </article>
+
+        <!-- Hackathon 03 -->
+        <article class="project">
+          <div class="project-art">
+            <span class="project-art-num">03</span>
+          </div>
+          <div class="project-info">
+            <div class="project-tag-row">
+              <span class="project-track">SMART TECHNOLOGY</span>
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
+            <h3>CAMPUS TECH</h3>
+            <p>Create technology that makes student life better.</p>
+            <a class="project-btn" href="https://campus-code-ten.vercel.app/#hackathons">ENTER ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05: The Mission & The Network -->
+    <section class="member" id="community">
+      <div>
+        <p class="section-tag">05 — THE MISSION</p>
+        <p class="eyebrow" style="margin-top: 20px;">CAMPUSCODE</p>
+        <h2>GREAT<br>IDEAS NEED<br><em>BUILDERS.</em></h2>
+        <p>Your university is full of people with ideas. CampusCode gives those ideas somewhere to go.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span>THE NETWORK</span>
+          <svg class="card-mini-logo" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-label="CampusCode">
+            <rect width="26" height="26" rx="6" fill="#f7f7f4" />
+            <rect x="4" y="3" width="5" height="18" rx="2" transform="rotate(-18 4 3)" fill="#111111" />
+            <rect x="10" y="3" width="5" height="18" rx="2" transform="rotate(-18 10 3)" fill="#7665ff" />
+            <rect x="16" y="3" width="5" height="18" rx="2" transform="rotate(-18 16 3)" fill="#a8e62e" />
+          </svg>
+        </div>
+        <div class="card-body">
+          <h4>FIND YOUR PEOPLE.</h4>
+          <ul class="card-pillars">
+            <li>Build with developers.</li>
+            <li>Think with designers.</li>
+            <li>Compete with builders.</li>
+          </ul>
+        </div>
+        <svg class="card-badge-logo" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-label="CampusCode">
+          <rect width="65" height="65" rx="12" fill="#f7f7f4" />
+          <rect x="10" y="9" width="12" height="42" rx="3" transform="rotate(-18 10 9)" fill="#111111" />
+          <rect x="27" y="9" width="12" height="42" rx="3" transform="rotate(-18 27 9)" fill="#7665ff" />
+          <rect x="44" y="9" width="12" height="42" rx="3" transform="rotate(-18 44 9)" fill="#a8e62e" />
+        </svg>
+      </div>
+
+      <div>
+        <p class="section-tag">READY?</p>
+        <h2>YOUR NEXT<br>PROJECT<br><em>STARTS HERE.</em></h2>
+        <p style="margin-top: 20px;">Take your skills to the arena and turn campus ambition into reality.</p>
+        <a class="pill black" href="register.html">JOIN CAMPUSCODE <b>↗</b></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-bubbles">
+        <button class="bubble" type="button">C</button>
+        <button class="bubble" type="button">A</button>
+        <button class="bubble" type="button">M</button>
+        <button class="bubble" type="button">P</button>
+        <button class="bubble" type="button">U</button>
+        <button class="bubble" type="button">S</button>
+        <button class="bubble" type="button">C</button>
+        <button class="bubble" type="button">O</button>
+        <button class="bubble" type="button">D</button>
+        <button class="bubble" type="button">E</button>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <svg class="footer-logo" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-label="CampusCode Logo">
+              <rect width="46" height="46" rx="8" fill="#f7f7f4" />
+              <rect x="7" y="6" width="8" height="30" rx="3" transform="rotate(-18 7 6)" fill="#111111" />
+              <rect x="17" y="6" width="8" height="30" rx="3" transform="rotate(-18 17 6)" fill="#7665ff" />
+              <rect x="27" y="6" width="8" height="30" rx="3" transform="rotate(-18 27 6)" fill="#a8e62e" />
+            </svg>
+            <div>
+              <h3>CAMPUSCODE</h3>
+              <p class="footer-tagline">HACKATHON ARENA</p>
+            </div>
+          </div>
+          <p class="footer-desc">The student hackathon arena. You build the idea, we run the competition.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>PRODUCT</h4>
+          <ul>
+            <li><a href="https://campus-code-ten.vercel.app/#about">About</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#hackathons">Hackathons</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#how">How it works</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#community">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>BUILDERS</h4>
+          <ul>
+            <li><a href="https://campus-code-ten.vercel.app/#student">Students</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#teams">Teams</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#organizers">Organizers</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#developers">Developers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>GUIDES</h4>
+          <ul>
+            <li><a href="https://campus-code-ten.vercel.app/#rules">Hackathon Rules</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#faq">FAQ</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#support">Support</a></li>
+            <li><a href="https://campus-code-ten.vercel.app/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <div class="system-status">
+          <span class="status-dot"></span> ALL SYSTEMS OPERATIONAL
+        </div>
+        <div class="footer-legal-links">
+          <a href="https://campus-code-ten.vercel.app/#terms">TERMS</a>
+          <a href="https://campus-code-ten.vercel.app/#privacy">PRIVACY</a>
+          <a href="https://campus-code-ten.vercel.app/#contact">CONTACT</a>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <p>© 2026 CAMPUSCODE</p>
+        <p>LEARN · BUILD · COMPETE · SHIP</p>
+        <p>CHENNAI · INDIA</p>
+        <a href="#top">BACK TO TOP ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="/js/entry.js"></script>
+  <script type="module" src="/js/hero-effects.js"></script>
+  <script type="module" src="/src/vanilla.js"></script>
+</body>
+
+</html>

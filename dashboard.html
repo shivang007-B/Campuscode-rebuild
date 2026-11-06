@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard — CAMPUSCODE Arena</title>
+  <link rel="stylesheet" href="/css/shared.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body class="dashboard-layout">
+  
+  <!-- Left Navigation Sidebar -->
+  <aside class="dashboard-sidebar">
+    <div>
+      <div class="sidebar-brand-wrap">
+        <a class="brand-link" href="index.html">
+          <svg class="brand-logo-svg" viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CampusCode Logo">
+            <rect width="44" height="44" rx="8" fill="#f7f7f4"/>
+            <rect x="7" y="6" width="8" height="32" rx="3" transform="rotate(-18 7 6)" fill="#111111"/>
+            <rect x="17" y="6" width="8" height="32" rx="3" transform="rotate(-18 17 6)" fill="#7665ff"/>
+            <rect x="27" y="6" width="8" height="32" rx="3" transform="rotate(-18 27 6)" fill="#a8e62e"/>
+          </svg>
+          <div class="brand-title-wrap">
+            <span class="brand-name" style="font-size: 14px;">CAMPUSCODE</span>
+            <small class="brand-subtitle">HACKATHON ARENA</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-nav-section">
+        <div class="sidebar-section-title">WORKSPACE</div>
+        <ul class="sidebar-menu">
+          <!-- Overview -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link active" data-tab="overview" href="#overview">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                Overview
+              </span>
+            </a>
+          </li>
+
+          <!-- Events -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="events" href="#events">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+                Events
+              </span>
+            </a>
+          </li>
+
+          <!-- My Events -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="my-events" href="#my-events">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+                My Events
+              </span>
+            </a>
+          </li>
+
+          <!-- HackMate AI -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="hackmate-ai" href="#hackmate-ai">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"></path></svg>
+                HackMate AI
+              </span>
+            </a>
+          </li>
+
+          <!-- IdeaSpark AI -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="ideaspark-ai" href="#ideaspark-ai">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                IdeaSpark AI
+              </span>
+            </a>
+          </li>
+
+          <!-- Certificates -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="certificates" href="#certificates">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                Certificates
+              </span>
+            </a>
+          </li>
+
+          <!-- Digital Card -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="digital-card" href="#digital-card">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                Digital Card
+              </span>
+            </a>
+          </li>
+
+          <!-- BuildBot AI -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="buildbot-ai" href="#buildbot-ai">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                BuildBot AI
+              </span>
+              <span class="sidebar-badge">V2</span>
+            </a>
+          </li>
+
+          <!-- Student Guide -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="student-guide" href="#student-guide">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Student Guide
+              </span>
+            </a>
+          </li>
+
+          <!-- Official Communication -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="official-comm" href="#official-comm">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                Official Communication
+              </span>
+            </a>
+          </li>
+
+          <!-- Notifications -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="notifications" href="#notifications">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                Notifications
+              </span>
+            </a>
+          </li>
+
+          <!-- Help & Support -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="help-support" href="#help-support">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                Help & Support
+              </span>
+            </a>
+          </li>
+
+          <!-- Profile -->
+          <li class="sidebar-menu-item">
+            <a class="sidebar-link" data-tab="profile" href="#profile">
+              <span class="sidebar-link-inner">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Profile
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sidebar Bottom Account Card -->
+    <div class="sidebar-account-wrap">
+      <div class="sidebar-account-card">
+        <div class="account-info-row">
+          <div class="account-avatar">
+            <img src="/avatar.png" alt="Shivang Singhal" class="sidebar-avatar-img">
+          </div>
+          <div class="account-details">
+            <span class="account-name" id="sidebar-user-name">SHIVANG SINGHAL</span>
+            <span class="account-role">STUDENT</span>
+          </div>
+        </div>
+        <a href="login.html" class="btn-logout">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          LOG OUT
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main View Area -->
+  <main class="dashboard-main">
+    
+    <!-- Topbar Navigation -->
+    <header class="dashboard-topbar">
+      <div class="topbar-breadcrumbs">
+        CAMPUSCODE / STUDENT / <strong id="breadcrumb-current-tab">OVERVIEW</strong>
+      </div>
+      <div class="topbar-actions">
+        <!-- Notification Bell with '2' badge -->
+        <div class="topbar-bell-btn" title="2 New Notifications" onclick="alert('You have 2 notifications: ReBuild 26 Round 1 is Live!');">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span class="bell-count-badge">2</span>
+        </div>
+
+        <!-- Refresh Button -->
+        <button type="button" class="topbar-refresh-btn" onclick="window.location.reload();" title="Refresh Live Data">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          REFRESH
+        </button>
+
+        <!-- User Profile Badge -->
+        <div class="topbar-user-badge">
+          <span class="topbar-user-avatar">
+            <img src="/avatar.png" alt="Shivang Singhal Avatar" class="topbar-avatar-img">
+          </span>
+          <span id="topbar-user-name">SHIVANG SINGHAL</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Views Container -->
+    <div class="dashboard-content">
+
+      <!-- Tab 1: Overview -->
+      <section class="tab-view active" id="view-overview">
+        <div class="view-header">
+          <div class="view-tag">
+            <span class="dot"></span> STUDENT WORKSPACE / LIVE
+          </div>
+          <h1 class="view-heading">
+            WELCOME BACK, <span id="user-greeting-name" class="highlight-purple">SHIVANG.</span>
+          </h1>
+          <p class="view-subtitle">
+            Your CampusCode activity is loaded directly from the backend.
+          </p>
+        </div>
+
+        <!-- Hero Featured Card: ReBuild '26 -->
+        <article class="featured-hero-card">
+          <div class="featured-card-top-stripe"></div>
+          <div class="featured-left-info">
+            <div class="featured-meta-row">
+              <span class="featured-timer-badge">
+                <span class="live-bolt">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </span>
+                <span id="featured-countdown">04:12:11</span>
+              </span>
+              <span class="meta-sep">/</span>
+              <span class="meta-chip">LEARN</span>
+              <span class="meta-sep">/</span>
+              <span class="meta-chip">001</span>
+              <span class="meta-sep">/</span>
+              <span class="meta-chip">COMPETE</span>
+              <span class="meta-status-chip">● ROUND 1 LIVE</span>
+            </div>
+            
+            <h2 class="featured-title">ReBuild '26</h2>
+            
+            <p class="featured-desc">
+              ReBuild '26 is an individual dashboard recreation hackathon by CampusCode. You participate alone, but you must create a team name for tracking and use it on your Civitai registration, the CampusCode portal, and every submission. Round 1 (Friday, 6 Nov, morning to 12 PM): Recreate the CampusCode user flow faithfully — Dashboard, Login, Register, and Student dashboard — and submit your demo URL by 12:00 PM. Round 2 (Saturday, 7 Nov, top performers from Round 1 only): Build a complete user UI in CampusCode's style. Frontend only, mock data is fine. All presentations hybrid: https://meet.google.com/sample • CampusCode Hackathon with ₹15,000 stipend, runner-up certificate, and participation certificates for all. Sunday, 3 Nov: Q/media is free. There is a paid event (₹99 for training), Paid students receive an invite code — enter it when you join the event on the portal.
+            </p>
+
+            <div class="featured-highlights-row">
+              <span class="hero-chip chip-lime">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1h10v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 4h12v6a6 6 0 0 1-12 0V4Z"></path></svg>
+                ₹15,000 Stipend
+              </span>
+              <span class="hero-chip chip-purple">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Demo Due 12:00 PM
+              </span>
+              <span class="hero-chip chip-ink">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Hybrid Presentation
+              </span>
+              <span class="hero-chip chip-lime-soft">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                Invite Code Active
+              </span>
+            </div>
+
+            <button type="button" class="btn-lime-glow" data-goto-tab="eventhub">
+              OPEN EVENT <span class="btn-arrow">↗</span>
+            </button>
+          </div>
+
+          <div class="featured-right-visual">
+            <div class="featured-glow-orb"></div>
+            <!-- Rotating Dashed Orbit Ring -->
+            <div class="visual-orbit-ring" aria-hidden="true">
+              <span class="orbit-planet planet-purple"></span>
+              <span class="orbit-planet planet-lime"></span>
+            </div>
+
+            <div class="avatar-badge-combo">
+              <div class="featured-avatar-circle" title="Shivang">
+                <img src="/avatar.png" alt="Shivang Avatar" class="featured-avatar-img">
+              </div>
+              <div class="featured-badge-circle" title="ReBuild '26">RE</div>
+            </div>
+
+            <!-- Floating Micro Tags -->
+            <div class="floating-orbit-tag tag-top">
+              <span class="pulse-dot"></span> LIVE ARENA
+            </div>
+            <div class="floating-orbit-tag tag-bottom">
+              ROUND 1
+            </div>
+          </div>
+        </article>
+
+        <!-- Stats 4-Grid Metrics Row -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-label">EVENTS ATTENDED</span>
+            <div class="stat-value">3</div>
+            <span class="stat-subtext">FROM 3 ACTIONS</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-label">TEAMS LED</span>
+            <div class="stat-value">1</div>
+            <span class="stat-subtext">FROM 1 ACTIONS</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-label">COMPLETED '25</span>
+            <div class="stat-value">2</div>
+            <span class="stat-subtext">FROM 2 ACTIONS</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-label">RSVP OF OLD PRO</span>
+            <div class="stat-value">1</div>
+            <span class="stat-subtext">FROM 1 ACTIONS</span>
+          </div>
+        </div>
+
+        <!-- Overview Widgets -->
+        <div class="overview-widgets-row">
+          
+          <!-- Widget 1: Upcoming Deadlines -->
+          <div class="overview-widget-card widget-deadlines">
+            <div class="widget-header">
+              <span class="widget-title">UPCOMING DEADLINES</span>
+              <a href="#events" class="widget-link" data-goto-tab="events">VIEW ALL ↗</a>
+            </div>
+            <div class="widget-body-centered">
+              <h3 class="widget-empty-title">No deadlines yet.</h3>
+              <p class="widget-empty-desc">Join an event and your upcoming dates will appear here.</p>
+              <a href="#events" class="btn-browse-events" data-goto-tab="events">
+                BROWSE EVENTS ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Widget 2: AI Spotlight -->
+          <div class="overview-widget-card widget-ai-spotlight">
+            <div class="widget-header">
+              <span class="widget-title">AI SPOTLIGHT</span>
+            </div>
+            <div class="widget-body-left">
+              <h3 class="widget-bold-heading">Your AI teammates are ready.</h3>
+              <p class="widget-body-desc">Check your idea, find teammates, or ask the rules — right from here.</p>
+              <div class="ai-spotlight-pills">
+                <a href="#hackmate-ai" class="ai-pill-btn" data-goto-tab="hackmate-ai">
+                  <span class="ai-pill-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                  </span> IDEACHECK
+                </a>
+                <a href="#hackmate-ai" class="ai-pill-btn" data-goto-tab="hackmate-ai">
+                  <span class="ai-pill-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  </span> HACKMATE
+                </a>
+                <a href="#hackmate-ai" class="ai-pill-btn" data-goto-tab="hackmate-ai">
+                  <span class="ai-pill-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="16" y1="16" x2="16.01" y2="16"></line></svg>
+                  </span> RULEBOT
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget 3: Your Journey Progress -->
+          <div class="overview-widget-card widget-journey">
+            <div class="widget-header">
+              <span class="widget-title">YOUR JOURNEY</span>
+              <a href="#certificates" class="widget-link" data-goto-tab="certificates">CERTIFICATES ↗</a>
+            </div>
+            <div class="journey-bars-list">
+              
+              <!-- Metric 1: Hackathons -->
+              <div class="journey-metric-item">
+                <div class="journey-icon-wrap">
+                  <div class="journey-icon-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+                  </div>
+                  <span class="journey-metric-label">HACKATHONS</span>
+                </div>
+                <div class="journey-bar-track">
+                  <div class="journey-bar-fill filled-active" style="width: 100%;"></div>
+                </div>
+                <span class="journey-metric-val">1</span>
+              </div>
+
+              <!-- Metric 2: Ongoing -->
+              <div class="journey-metric-item">
+                <div class="journey-icon-wrap">
+                  <div class="journey-icon-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <span class="journey-metric-label">ONGOING</span>
+                </div>
+                <div class="journey-bar-track">
+                  <div class="journey-bar-fill filled-active" style="width: 100%;"></div>
+                </div>
+                <span class="journey-metric-val">1</span>
+              </div>
+
+              <!-- Metric 3: Completed -->
+              <div class="journey-metric-item">
+                <div class="journey-icon-wrap">
+                  <div class="journey-icon-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+                  </div>
+                  <span class="journey-metric-label">COMPLETED</span>
+                </div>
+                <div class="journey-bar-track">
+                  <div class="journey-bar-fill filled-zero">
+                    <span class="zero-dot"></span>
+                  </div>
+                </div>
+                <span class="journey-metric-val">0</span>
+              </div>
+
+              <!-- Metric 4: Certificates -->
+              <div class="journey-metric-item">
+                <div class="journey-icon-wrap">
+                  <div class="journey-icon-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  </div>
+                  <span class="journey-metric-label">CERTIFICATES</span>
+                </div>
+                <div class="journey-bar-track">
+                  <div class="journey-bar-fill filled-zero">
+                    <span class="zero-dot"></span>
+                  </div>
+                </div>
+                <span class="journey-metric-val">0</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Current Activity & Notifications -->
+        <div class="overview-activity-notifs-row">
+          
+          <!-- Column 1: Current Activity -->
+          <div class="overview-activity-card">
+            <div class="widget-header">
+              <span class="widget-title">01 / CURRENT ACTIVITY</span>
+              <a href="#events" class="widget-link" data-goto-tab="events">VIEW EVENTS ↗</a>
+            </div>
+            <div class="activity-content-wrap">
+              <div class="activity-uuid-col">
+                <span class="activity-uuid">e2798ce3-a1b5-4806-9147-4d9f10c52ef1</span>
+              </div>
+              <div class="activity-title-col">
+                <h3 class="activity-event-name">ReBuild<br>'26</h3>
+              </div>
+              <div class="activity-tags-col">
+                <div class="tags-top-row">
+                  <span class="activity-pill-tag">LIVE</span>
+                  <span class="activity-pill-tag">—</span>
+                </div>
+                <div class="tags-bottom-row">
+                  <span class="activity-pill-tag tag-date">NOV 06, 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Notifications -->
+          <div class="overview-notifs-card">
+            <div class="widget-header">
+              <span class="widget-title">02 / NOTIFICATIONS</span>
+              <a href="#notifications" class="widget-link" onclick="alert('Viewing all notifications: Round is live!');">OPEN ALL ↗</a>
+            </div>
+            <div class="notifs-list">
+              
+              <!-- Notification Item 1 -->
+              <div class="notif-feed-item">
+                <div class="notif-item-header">
+                  <span class="notif-title-row">
+                    <span class="notif-dot green"></span>
+                    <strong>Round is Live</strong>
+                  </span>
+                  <span class="notif-date">Nov 06, 2026</span>
+                </div>
+                <p class="notif-body-text">
+                  Hello students ReBuild'26 hackathon round 1 is Live . You can submit your live demo + GitHub before 10pm toady
+                </p>
+              </div>
+
+              <!-- Notification Item 2 -->
+              <div class="notif-feed-item">
+                <div class="notif-item-header">
+                  <span class="notif-title-row">
+                    <span class="notif-dot green"></span>
+                    <strong>Create your team</strong>
+                  </span>
+                  <span class="notif-date">Nov 05, 2026</span>
+                </div>
+                <p class="notif-body-text">
+                  hello guys when you join the event using invite code you need to create a team . to create team go to hackmate ai select rebuild hackathon then create your team name
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Tab 2: My Events -->
+      <section class="tab-view" id="view-my-events">
+        <div class="page-title-row">
+          <div>
+            <div class="view-tag">
+              <span class="dot"></span> MY ACTIVITY / BACKEND DATA
+            </div>
+            <h1 class="view-heading">MY EVENTS.</h1>
+            <p class="view-subtitle">
+              Every event you joined, in one place. Open one to see its rounds, team, results and certificates.
+            </p>
+          </div>
+          <div class="live-counter-badge">
+            <span class="counter-number">01</span>
+            <span class="counter-label">LIVE DATA</span>
+          </div>
+        </div>
+
+        <div class="my-events-single-grid">
+          <!-- Joined Event Card: ReBuild '26 -->
+          <article class="my-event-card">
+            <div class="event-banner-wrap banner-rebuild">
+              <div class="banner-top-row">
+                <div class="banner-brand">
+                  <svg class="brand-logo-svg" viewBox="0 0 44 44" width="34" height="34" fill="none">
+                    <rect width="44" height="44" rx="7" fill="#111111"/>
+                    <rect x="7" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 7 6)" fill="#ffffff"/>
+                    <rect x="17" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 17 6)" fill="#7665ff"/>
+                    <rect x="27" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 27 6)" fill="#a8e62e"/>
+                  </svg>
+                  <div class="banner-text-group">
+                    <span class="banner-brand-sub">CAMPUSCODE PRESENTS</span>
+                    <strong class="banner-brand-name">ReBuild '26</strong>
+                    <small class="banner-brand-desc">THE DASHBOARD RECREATION HACKATHON</small>
+                  </div>
+                </div>
+              </div>
+              <div class="banner-reward-stripe">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>CERTIFICATE FOR WINNERS • INTERNSHIP OPPORTUNITY • REGISTER BY 5 NOV 2026
+              </div>
+            </div>
+
+            <div class="event-meta-stripe">
+              <span class="event-type-reg">REGISTRATION</span>
+              <span class="event-uuid-green">e4271f3c-295e-4e93-b193-b1bee9216c32</span>
+            </div>
+
+            <div class="my-event-content">
+              <div class="my-event-header">
+                <div class="event-round-badge green">RE</div>
+                <h2 class="my-event-title">ReBuild '26</h2>
+              </div>
+
+              <div class="my-event-status-block">
+                <div class="status-row">STATUS: <strong>REGISTERED</strong></div>
+                <div class="status-row">TEAM: <strong>spacex</strong></div>
+              </div>
+
+              <div class="my-event-footer">
+                <button type="button" class="btn-open-journey" data-goto-tab="eventhub">
+                  OPEN JOURNEY ↗
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Event Hub: ReBuild '26 Live Hub -->
+      <section class="tab-view" id="view-eventhub">
+        
+        <!-- Back Navigation Button -->
+        <div class="eventhub-back-row">
+          <button type="button" class="btn-all-my-events" data-goto-tab="my-events">
+            ← ALL MY EVENTS
+          </button>
+        </div>
+
+        <!-- Event Hub Header -->
+        <div class="eventhub-header">
+          <div class="view-tag">
+            <span class="dot green"></span> EVENT / LIVE HUB
+          </div>
+          <h1 class="view-heading eventhub-heading">REBUILD '26.</h1>
+          <p class="view-subtitle eventhub-subtitle">
+            Everything for this event lives here — rounds, team, results, leaderboard and certificates.
+          </p>
+        </div>
+
+        <!-- Horizontal Sub-Tabs -->
+        <div class="eventhub-nav-tabs">
+          <button type="button" class="eventhub-tab-btn active" data-subtab="overview">Overview</button>
+          <button type="button" class="eventhub-tab-btn" data-subtab="rounds">Rounds</button>
+          <button type="button" class="eventhub-tab-btn" data-subtab="team">My Team</button>
+          <button type="button" class="eventhub-tab-btn" data-subtab="results">Results</button>
+          <button type="button" class="eventhub-tab-btn" data-subtab="leaderboard">Leaderboard</button>
+          <button type="button" class="eventhub-tab-btn" data-subtab="certificates">Certificates</button>
+          <button type="button" class="eventhub-tab-btn" data-subtab="announcements">Announcements</button>
+        </div>
+
+        <!-- Overview Content Area -->
+        <div class="eventhub-overview-content">
+          
+          <!-- Top Event Banner Card -->
+          <article class="eventhub-banner-card">
+            <div class="eventhub-banner-content">
+              <div class="eventhub-logo-box">
+                <svg viewBox="0 0 44 44" width="56" height="56" fill="none">
+                  <rect x="7" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 7 6)" fill="#ffffff"/>
+                  <rect x="17" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 17 6)" fill="#7665ff"/>
+                  <rect x="27" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 27 6)" fill="#a8e62e"/>
+                </svg>
+              </div>
+              <div class="eventhub-banner-info">
+                <span class="eventhub-banner-sub">CAMPUSCODE PRESENTS</span>
+                <h2 class="eventhub-banner-title">ReBuild <span class="highlight-purple">'26</span></h2>
+                <div class="eventhub-banner-tagline">THE DASHBOARD RECREATION HACKATHON</div>
+                <div class="eventhub-chips-row">
+                  <span class="eventhub-info-chip">
+                    <span class="chip-dot purple"></span> CERTIFICATE FOR WINNERS
+                  </span>
+                  <span class="eventhub-info-chip">
+                    <span class="chip-dot green"></span> INTERNSHIP OPPORTUNITY
+                  </span>
+                  <span class="eventhub-info-chip">
+                    <span class="chip-dot purple"></span> REGISTER BY 5 NOV 2026
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="eventhub-banner-decor" aria-hidden="true"></div>
+          </article>
+
+          <!-- 3-Column Info Strip Card -->
+          <div class="eventhub-info-strip-card">
+            <div class="info-strip-col">
+              <span class="info-strip-label">REGISTRATION ID</span>
+              <div class="info-strip-value mono">e4271f3c-295a-4a93-b193-b1bea9216c32</div>
+            </div>
+            <div class="info-strip-col">
+              <span class="info-strip-label">STATUS</span>
+              <div class="info-strip-value status-bold">REGISTERED</div>
+            </div>
+            <div class="info-strip-col">
+              <span class="info-strip-label">TEAM</span>
+              <div class="info-strip-value team-bold">spacex</div>
+            </div>
+          </div>
+
+          <!-- Bottom 2-Column Grid: Round Pipeline & Team Record -->
+          <div class="eventhub-bottom-grid">
+            
+            <!-- Column 1: Round Pipeline -->
+            <div class="eventhub-pipeline-card">
+              <h3 class="pipeline-card-title">ROUND PIPELINE</h3>
+              <p class="pipeline-card-desc">Click a round to see what you need to submit.</p>
+              
+              <div class="pipeline-rounds-list">
+                <!-- Round 1: Live -->
+                <div class="pipeline-round-row active-live">
+                  <div class="round-row-left">
+                    <div class="round-num-box num-active">1</div>
+                    <div class="round-row-text">
+                      <strong class="round-name">Round 1 - Recreate</strong>
+                      <span class="round-status-live">LIVE</span>
+                    </div>
+                  </div>
+                  <div class="round-row-right">
+                    <span class="round-dash">—</span>
+                  </div>
+                </div>
+
+                <!-- Round 2: Scheduled -->
+                <div class="pipeline-round-row">
+                  <div class="round-row-left">
+                    <div class="round-num-box num-muted">2</div>
+                    <div class="round-row-text">
+                      <strong class="round-name muted">Round 2 - New UI</strong>
+                      <span class="round-status-muted">SCHEDULED</span>
+                    </div>
+                  </div>
+                  <div class="round-row-right">
+                    <span class="round-dash">—</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Team Record -->
+            <div class="eventhub-team-card">
+              <span class="team-card-label">TEAM RECORD</span>
+              <span class="team-card-sublabel">TEAM</span>
+              <h2 class="team-card-name">sai'steam</h2>
+              <div class="team-card-id">ID: 713ad00f-2af7-47f9-a146-497533715bdd</div>
+              <div class="team-card-status">STATUS: BUILDING</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Tab 3: Events Explorer -->
+      <section class="tab-view" id="view-events">
+        <div class="page-title-row">
+          <div>
+            <div class="view-tag">
+              <span class="dot"></span> DISCOVER / BACKEND DATA
+            </div>
+            <h1 class="view-heading">EVENTS.</h1>
+            <p class="view-subtitle">
+              Explore CampusCode events — hackathons, quizzes, workshops — and join the ones you want.
+            </p>
+          </div>
+          <div class="live-counter-badge">
+            <span class="counter-number">03</span>
+            <span class="counter-label">LIVE DATA</span>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="events-filter-row">
+          <button type="button" class="filter-pill active" data-filter="all">All events</button>
+          <button type="button" class="filter-pill" data-filter="hackathons">Hackathons</button>
+          <button type="button" class="filter-pill" data-filter="quizzes">Quizzes</button>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="portal-events-grid">
+          
+          <!-- Event 1: ReBuild '26 -->
+          <article class="portal-event-card" data-category="hackathons">
+            <div class="event-banner-wrap banner-rebuild">
+              <div class="banner-top-row">
+                <div class="banner-brand">
+                  <svg class="brand-logo-svg" viewBox="0 0 44 44" width="30" height="30" fill="none">
+                    <rect width="44" height="44" rx="6" fill="#111111"/>
+                    <rect x="7" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 7 6)" fill="#ffffff"/>
+                    <rect x="17" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 17 6)" fill="#7665ff"/>
+                    <rect x="27" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 27 6)" fill="#a8e62e"/>
+                  </svg>
+                  <div class="banner-text-group">
+                    <span class="banner-brand-sub">CAMPUSCODE PRESENTS</span>
+                    <strong class="banner-brand-name">ReBuild '26</strong>
+                    <small class="banner-brand-desc">THE DASHBOARD RECREATION HACKATHON</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-meta-stripe">
+              <span class="event-uuid-tag">e2798ce3-a1b5-4806-9147-4d9f10c52ef1</span>
+              <span class="status-badge-live">LIVE</span>
+            </div>
+
+            <div class="portal-event-main">
+              <div class="portal-event-header">
+                <div class="event-round-badge green">RE</div>
+                <h2 class="portal-event-title">ReBuild '26</h2>
+              </div>
+
+              <p class="portal-event-description">
+                ReBuild '26 is an individual dashboard recreation hackathon by CampusCode. You participate alone, but you must create a team name for tracking and use it on your Civitai registration, the CampusCode portal, and every submission. Round 1 (Friday, 6 Nov, morning to 10 PM): Recreate the CampusCode user flow faithfully — Dashboard, Login, Register, and Student dashboard — and submit your demo any time till 10 PM. Round 2 (Saturday, 7 Nov, top performers from Round 1 only): Build a complete new UI in CampusCode's vibe. Frontend only, mock data is fine. No presentation round. Prizes: Winner certificate + CampusCode internship with ₹15,000 stipend, runner-up certificate, and participation certificates for all. Sunday, 8 Nov (Diwali) is free. This is a paid event (₹50 on Unstop). Paid students receive an invite code — enter it when you join this event on the portal.
+              </p>
+
+              <div class="event-specs-grid">
+                <div class="spec-col">
+                  <span class="spec-label">MODE</span>
+                  <span class="spec-val">—</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">TEAM SIZE</span>
+                  <span class="spec-val">Individual</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">START</span>
+                  <span class="spec-val">Nov 06, 2026</span>
+                </div>
+              </div>
+
+              <div class="portal-event-actions">
+                <button type="button" class="btn-card-outline open-journey-trigger" data-event-title="ReBuild '26">VIEW DETAILS ↗</button>
+                <button type="button" class="btn-card-joined">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> JOINED
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 2: FirstCommit '26 Quiz Competition 2.0 -->
+          <article class="portal-event-card" data-category="quizzes">
+            <div class="event-banner-wrap banner-quiz">
+              <div class="banner-top-row">
+                <div class="banner-brand">
+                  <svg class="brand-logo-svg" viewBox="0 0 44 44" width="30" height="30" fill="none">
+                    <rect width="44" height="44" rx="6" fill="#111111"/>
+                    <rect x="7" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 7 6)" fill="#ffffff"/>
+                    <rect x="17" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 17 6)" fill="#7665ff"/>
+                    <rect x="27" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 27 6)" fill="#a8e62e"/>
+                  </svg>
+                  <div class="banner-text-group">
+                    <span class="banner-brand-sub">CAMPUSCODE PRESENTS</span>
+                    <strong class="banner-brand-name">FIRSTCOMMIT '26</strong>
+                    <small class="banner-brand-desc">QUIZ COMPETITION 2.0</small>
+                  </div>
+                </div>
+                <div class="banner-watermark-num">50</div>
+              </div>
+            </div>
+
+            <div class="event-meta-stripe">
+              <span class="event-uuid-tag">20864c76-4792-4b09-a2e9-ff6764bf20d6</span>
+              <span class="status-badge-completed">COMPLETED</span>
+            </div>
+
+            <div class="portal-event-main">
+              <div class="portal-event-header">
+                <div class="event-round-badge green">FQ</div>
+                <h2 class="portal-event-title">FirstCommit '26 Quiz Competition 2.0</h2>
+              </div>
+
+              <p class="portal-event-description">
+                This is the reattempt quiz those who missed
+              </p>
+
+              <div class="event-specs-grid">
+                <div class="spec-col">
+                  <span class="spec-label">MODE</span>
+                  <span class="spec-val">—</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">FORMAT</span>
+                  <span class="spec-val">Solo</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">START</span>
+                  <span class="spec-val">—</span>
+                </div>
+              </div>
+
+              <div class="portal-event-actions">
+                <button type="button" class="btn-card-outline" onclick="alert('Viewing FirstCommit Quiz 2.0 details');">VIEW DETAILS ↗</button>
+                <button type="button" class="btn-card-black" onclick="alert('Quiz 2.0 is already completed.');">REGISTER FOR QUIZ ↗</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 3: FirstCommit '26 Quiz Competition -->
+          <article class="portal-event-card" data-category="quizzes">
+            <div class="event-banner-wrap banner-quiz">
+              <div class="banner-top-row">
+                <div class="banner-brand">
+                  <svg class="brand-logo-svg" viewBox="0 0 44 44" width="30" height="30" fill="none">
+                    <rect width="44" height="44" rx="6" fill="#111111"/>
+                    <rect x="7" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 7 6)" fill="#ffffff"/>
+                    <rect x="17" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 17 6)" fill="#7665ff"/>
+                    <rect x="27" y="6" width="7" height="32" rx="2.5" transform="rotate(-18 27 6)" fill="#a8e62e"/>
+                  </svg>
+                  <div class="banner-text-group">
+                    <span class="banner-brand-sub">CAMPUSCODE PRESENTS</span>
+                    <strong class="banner-brand-name">FIRSTCOMMIT '26</strong>
+                    <small class="banner-brand-desc">QUIZ COMPETITION</small>
+                  </div>
+                </div>
+                <div class="banner-watermark-num">50</div>
+              </div>
+            </div>
+
+            <div class="event-meta-stripe">
+              <span class="event-uuid-tag">80299fc1-3e30-466f-a146-fd45c77c04be</span>
+              <span class="status-badge-completed">COMPLETED</span>
+            </div>
+
+            <div class="portal-event-main">
+              <div class="portal-event-header">
+                <div class="event-round-badge dark">FQ</div>
+                <div>
+                  <h2 class="portal-event-title">FirstCommit '26 Quiz Competition</h2>
+                  <div class="portal-event-subtag">QUIZ • SOLO • TIMED</div>
+                </div>
+              </div>
+
+              <p class="portal-event-description">
+                The quiz features 50 questions across technology, AI, and engineering — 42 multiple-choice questions and 8 true/false questions — to be completed in 30 minutes on Sunday, 1 November 2026. It is conducted online on the CampusCode platform, and every participant gets a single attempt.
+              </p>
+
+              <div class="event-specs-grid">
+                <div class="spec-col">
+                  <span class="spec-label">MODE</span>
+                  <span class="spec-val">—</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">FORMAT</span>
+                  <span class="spec-val">Solo</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">START</span>
+                  <span class="spec-val">—</span>
+                </div>
+              </div>
+
+              <div class="portal-event-actions">
+                <button type="button" class="btn-card-outline" onclick="alert('Viewing FirstCommit Quiz details');">VIEW DETAILS ↗</button>
+                <button type="button" class="btn-card-black" onclick="alert('Registration closed.');">REGISTER FOR QUIZ ↗</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Workspace Views -->
+      <section class="tab-view" id="view-hackmate-ai"></section>
+
+      <section class="tab-view" id="view-certificates"></section>
+
+      <!-- Tab 4: Student Profile -->
+      <section class="tab-view" id="view-profile">
+        <div class="view-header">
+          <div class="view-tag">
+            <span class="dot"></span> ACCOUNT / BACKEND PROFILE
+          </div>
+          <h1 class="view-heading">YOUR PROFILE.</h1>
+          <p class="view-subtitle">
+            Edit your student profile and save the changes directly to the CampusCode backend.
+          </p>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-field-card">
+            <span class="field-label">NAME</span>
+            <div class="field-value">SHIVANG SINGHAL</div>
+          </div>
+          <div class="profile-field-card">
+            <span class="field-label">EMAIL</span>
+            <div class="field-value">shivang369ksd@gmail.com</div>
+          </div>
+          <div class="profile-field-card">
+            <span class="field-label">ROLE</span>
+            <div class="field-value">STUDENT</div>
+          </div>
+          <div class="profile-field-card">
+            <span class="field-label">CAMPUSCODE ID</span>
+            <div class="field-value">CC-XF989T</div>
+          </div>
+          <div class="profile-field-card">
+            <span class="field-label">BIO</span>
+            <div class="field-value muted-dash">—</div>
+          </div>
+          <div class="profile-field-card">
+            <span class="field-label">SKILLS</span>
+            <div class="field-value muted-dash">—</div>
+          </div>
+        </div>
+
+        <div class="profile-actions-row">
+          <button type="button" class="btn-edit-profile" onclick="alert('Edit Profile: Update your Bio, Skills, and Social Links.');">
+            EDIT PROFILE ↗
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Journey Details Modal Drawer -->
+  <div class="modal-overlay" id="journey-modal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="mono-tag" style="margin-bottom: 8px;">
+        <span class="dot"></span> <span id="modal-event-round">ROUND 1: LIVE</span>
+      </div>
+      <h2 id="modal-event-title" style="font-family: var(--font-display); font-size: 28px; margin-bottom: 14px;">ReBuild '26</h2>
+      <p style="font-size: 14px; line-height: 1.6; color: #444; margin-bottom: 20px;">
+        Submit your frontend reproduction demo. Ensure your team code is linked and all 4 flows (Landing, Login, Register, Dashboard) are connected and tested.
+      </p>
+      
+      <div style="background: #f7f7f4; border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; margin-bottom: 6px;">SUBMISSION LINK:</div>
+        <input type="text" class="form-input" value="https://campuscode-arena.vercel.app/shivang" style="background:#fff;" readonly>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <button type="button" class="btn-black" onclick="alert('Submission received! Best of luck in the arena.'); document.getElementById('journey-modal').classList.remove('open');">
+          SUBMIT PROJECT <span class="arrow">↗</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>

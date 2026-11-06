@@ -1,0 +1,153 @@
+/* CampusCode Cinematic Entry Splash Animation */
+
+#entry-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7f7f4;
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+#entry-splash.hide {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Slashes animation */
+.splash-logo-svg {
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.08));
+}
+
+.slash-anim-1 {
+  animation: slashDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
+}
+
+.slash-anim-2 {
+  animation: slashDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s both;
+}
+
+.slash-anim-3 {
+  animation: slashDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+}
+
+@keyframes slashDrop {
+  0% {
+    transform: translateY(-80px) rotate(-18deg) scaleY(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(-18deg) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.splash-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #111111;
+  animation: splashFadeUp 0.6s ease 0.4s both;
+}
+
+.splash-tagline {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #7665ff;
+  text-transform: uppercase;
+  animation: splashFadeUp 0.6s ease 0.55s both;
+}
+
+@keyframes splashFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar */
+.splash-progress-container {
+  width: 220px;
+  height: 4px;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+  animation: splashFadeUp 0.6s ease 0.65s both;
+}
+
+.splash-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7665ff, #a8e62e);
+  border-radius: 4px;
+  transition: width 0.05s linear;
+}
+
+.splash-status {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #666666;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.splash-skip-btn {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  background: none;
+  border: 1px solid #deded8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.splash-skip-btn:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
