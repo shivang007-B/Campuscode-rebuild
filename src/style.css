@@ -1311,6 +1311,86 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+  nav {
+    padding: 0 12px;
+    height: 64px;
+  }
+
+  .brand-text span {
+    font-size: 13px;
+  }
+
+  .nav-login {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .pill-sm {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 24px 14px 44px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 15vw, 4.2rem);
+    line-height: 1.05;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .hero-actions .pill {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .planet-one {
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    right: 10px;
+    opacity: 0.6;
+  }
+
+  .planet-two {
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    bottom: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 24px 0 0;
+  }
+
+  .about,
+  .how-it-works,
+  .projects,
+  .experience,
+  .member {
+    padding: 50px 14px;
+  }
+}
+
+/* Hide interactive cursor on touch & mobile screens */
+@media (max-width: 900px), (pointer: coarse) {
+  .arena-cursor-dot,
+  .arena-cursor-ring {
+    display: none !important;
+  }
+}
+
 /* ======================================================= */
 /* Interactive Cursor Follower (Subtle Brutalist Polish)   */
 /* ======================================================= */

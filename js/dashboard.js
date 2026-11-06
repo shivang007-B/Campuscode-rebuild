@@ -164,6 +164,38 @@ function initEventHubSubtabs() {
   });
 }
 
+function initMobileSidebar() {
+  const toggleBtn = document.getElementById('mobile-sidebar-toggle');
+  const closeBtn = document.getElementById('mobile-sidebar-close');
+  const sidebar = document.querySelector('.dashboard-sidebar');
+  const backdrop = document.getElementById('mobile-sidebar-backdrop');
+  const navLinks = document.querySelectorAll('.sidebar-link[data-tab]');
+
+  function openSidebar() {
+    if (sidebar) sidebar.classList.add('mobile-open');
+    if (backdrop) backdrop.classList.add('active');
+    document.body.classList.add('sidebar-locked');
+  }
+
+  function closeSidebar() {
+    if (sidebar) sidebar.classList.remove('mobile-open');
+    if (backdrop) backdrop.classList.remove('active');
+    document.body.classList.remove('sidebar-locked');
+  }
+
+  if (toggleBtn) toggleBtn.addEventListener('click', openSidebar);
+  if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+  if (backdrop) backdrop.addEventListener('click', closeSidebar);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        closeSidebar();
+      }
+    });
+  });
+}
+
 function initDashboard() {
   initUserGreeting();
   initNavigationTabs();
@@ -171,6 +203,7 @@ function initDashboard() {
   initCountdownTimer();
   initJourneyModal();
   initEventHubSubtabs();
+  initMobileSidebar();
 }
 
 if (document.readyState === 'loading') {
