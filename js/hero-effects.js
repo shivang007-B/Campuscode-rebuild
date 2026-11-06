@@ -165,7 +165,9 @@ class HeroInteractiveEngine {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => new HeroInteractiveEngine());
+} else {
   new HeroInteractiveEngine();
-});
+}
 

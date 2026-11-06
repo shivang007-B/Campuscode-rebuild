@@ -164,12 +164,18 @@ function initEventHubSubtabs() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initDashboard() {
   initUserGreeting();
   initNavigationTabs();
   initEventsFilter();
   initCountdownTimer();
   initJourneyModal();
   initEventHubSubtabs();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDashboard);
+} else {
+  initDashboard();
+}
 

@@ -34,6 +34,27 @@
     </div>
   </aside>
 
+  <script>
+    (function () {
+      var splash = document.getElementById('entry-splash');
+      if (!splash) return;
+      if (sessionStorage.getItem('cc_splash_shown')) {
+        splash.style.display = 'none';
+        splash.remove();
+        return;
+      }
+      setTimeout(function () {
+        if (splash && splash.parentNode) {
+          splash.classList.add('hide');
+          setTimeout(function () {
+            splash.style.display = 'none';
+            if (splash.parentNode) splash.remove();
+          }, 450);
+        }
+      }, 1200);
+    })();
+  </script>
+
   <main id="top">
     <!-- Navigation -->
     <nav>

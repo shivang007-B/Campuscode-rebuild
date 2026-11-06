@@ -71,15 +71,15 @@ function initAuthForm() {
 
       // Button loading effect
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `AUTHENTICATING... <span class="arrow">⏳</span>`;
+      submitBtn.innerHTML = `AUTHENTICATING... <span class="arrow">↗</span>`;
 
       setTimeout(() => {
         submitBtn.innerHTML = `SUCCESS <span class="arrow">✓</span>`;
         submitBtn.style.backgroundColor = '#82b91a';
         setTimeout(() => {
           window.location.href = 'dashboard.html';
-        }, 400);
-      }, 700);
+        }, 300);
+      }, 500);
     });
   }
 
@@ -99,22 +99,28 @@ function initAuthForm() {
       sessionStorage.setItem('cc_user_email', email);
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `CREATING ACCOUNT... <span class="arrow">⏳</span>`;
+      submitBtn.innerHTML = `CREATING ACCOUNT... <span class="arrow">↗</span>`;
 
       setTimeout(() => {
         submitBtn.innerHTML = `ACCOUNT READY <span class="arrow">✓</span>`;
         submitBtn.style.backgroundColor = '#82b91a';
         setTimeout(() => {
           window.location.href = 'dashboard.html';
-        }, 400);
-      }, 700);
+        }, 300);
+      }, 500);
     });
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAuth() {
   initCaptcha();
   initPasswordToggles();
   initAuthForm();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAuth);
+} else {
+  initAuth();
+}
 

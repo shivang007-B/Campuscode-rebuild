@@ -16,14 +16,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
   overflow: hidden;
+  /* CSS Failsafe: Automatically dismisses splash even if JS is interrupted */
+  animation: splashAutoDismiss 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards;
+}
+
+@keyframes splashAutoDismiss {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  99% {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
+  }
 }
 
 #entry-splash.hide {
-  opacity: 0;
-  transform: scale(1.04);
-  pointer-events: none;
+  opacity: 0 !important;
+  transform: scale(1.04) !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
 }
 
 .splash-content {
